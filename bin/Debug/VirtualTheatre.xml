@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtualTheatre</name>
+    </assembly>
+    <members>
+        <member name="T:LibVlc.LibVlc">
+             Class LibVlc
+            
+        </member>
+        <member name="M:VirtualTheatre.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.sessionListener">
+            <summary>
+            UdpClient to listen for requests after creation of new session
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.chatListener">
+            <summary>
+            UdpClient to listen for chat in a session
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.sessionClient">
+            <summary>
+            UdpClient to listen for acknowledgement after joining a new session
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.chatClient">
+            <summary>
+            UdpClient to send chat in a session
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.initListener">
+            <summary>
+            UdpClient to initialize the environment and listen for any session related information
+            being broadcasted
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.initClient">
+            <summary>
+            UdpClient to initialize the environment and broadcast any session related information
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.forceInformationClient">
+            <summary>
+            UdpClient to broadcast any "urgent" information that needs to be complied
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.SearchVlcPath">
+            <summary>
+            Search path for libvlc and plugins directory using registry, 
+            and environement PATH variable
+            </summary>
+            <returns>VLC path, or current app path</returns>
+        </member>
+        <member name="M:VirtualTheatre.Form1.CheckVlcDirectory(System.String)">
+            <summary>
+            Check if directory is a valid VLC directory : contains libvlc.* (dll or so) and sub-directory 'plugins'
+            </summary>
+            <param name="dir">Directory to check</param>
+            <returns>True if directory is a VLC</returns>
+        </member>
+        <member name="M:VirtualTheatre.Form1.SetEnvironement(System.String)">
+            <summary>
+            Set current process environement variable PATH to have the system find the libvlc.dll
+            </summary>
+            <param name="vlcpath">Path of libvlc.dll</param>
+        </member>
+        <member name="M:VirtualTheatre.Form1.updateseekBar">
+            <summary>
+            Update the seekBar
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.startseekBar">
+            <summary>
+            The method to create a thread and start it
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.seekBarThreadProc">
+            <summary>
+            The method that starts the thread
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.changeState(System.Boolean,System.Boolean)">
+            <summary>
+            Used to change the state of session handling buttons
+            </summary>
+            <param name="createButton">Determines whether or not a new session can be created</param>
+            <param name="joinButton">Determines whether a session can be joined</param>
+        </member>
+        <member name="M:VirtualTheatre.Form1.initListenerThreadProc">
+            <summary>
+            Listener thread that runs for the lifetime of application
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.initClientThreadProc">
+            <summary>
+            Thread that runs for the lifetime of the application and is respponsible 
+            for broadcasting session status
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.logBoxAdd(System.String)">
+            <summary>
+            Method to add a new message to the logBox
+            </summary>
+            <param name="line">The log message to be appended</param>
+        </member>
+        <member name="M:VirtualTheatre.Form1.newSessionListenerThreadProc">
+            <summary>
+            Listener thread that comes into existence when a new session is created
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.newSessionClientThreadProc">
+            <summary>
+            Client thread to broadcast presence of new session
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.forceUpdateSessionInformation(System.String)">
+            <summary>
+            Force update of special session status messages
+            </summary>
+            <param name="line">The message to be passed</param>
+        </member>
+        <member name="M:VirtualTheatre.Form1.joinSessionListenerThreadProc">
+            <summary>
+            Listener thread that comes into existence when an existing session is joined
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.joinSessionClientThreadProc">
+            <summary>
+            Client thread that advertises the presence of a new host
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.chatDisplayAdd(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Method to add a new chat message to the chat window
+            </summary>
+            <param name="line">The message to be appended</param>
+            <param name="broadcastToAll">If message is updated on remote window</param>
+            <param name="localUpdate">If message is updated on local window</param>
+        </member>
+        <member name="M:VirtualTheatre.Form1.chatThreadProc">
+            <summary>
+            Thread to run chat. Runs for the lifetime of the session
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.initConditions">
+            <summary>
+            Reset the application to starting conditions
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.pause(System.Boolean)">
+            <summary>
+            Used to play or pause video. Invoked from within other event handlers
+            </summary>
+            <param name="playPause"> true = pause; false = play</param>
+            
+        </member>
+        <member name="M:VirtualTheatre.Form1.performCleanup(System.Boolean)">
+            <summary>
+            Performs teardown of a session and does necessary cleanup
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.playStream">
+            <summary>
+            Method to start streaming of media
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.receiveStream">
+            <summary>
+            Method to start leeching of media
+            </summary>
+        </member>
+        <member name="F:VirtualTheatre.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VirtualTheatre.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VirtualTheatre.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:VirtualTheatre.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:VirtualTheatre.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:VirtualTheatre.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

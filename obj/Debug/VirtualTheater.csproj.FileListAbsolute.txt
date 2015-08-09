@@ -1,0 +1,12 @@
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\bin\Debug\VirtualTheatre.xml
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\bin\Debug\VirtualTheatre.exe
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\bin\Debug\VirtualTheatre.pdb
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\obj\Debug\VirtualTheatre.Form1.resources
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\obj\Debug\VirtualTheatre.Properties.Resources.resources
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\obj\Debug\VirtualTheater.csproj.GenerateResource.Cache
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\obj\Debug\VirtualTheatre.exe
+C:\Documents and Settings\daru\Desktop\VT The Final\VirtualTheater\obj\Debug\VirtualTheatre.pdb
+C:\Users\Darshan\Downloads\VT The Final\VT The Final\VirtualTheater\bin\Debug\VirtualTheatre.xml
+C:\Users\Darshan\Downloads\VT The Final\VT The Final\VirtualTheater\obj\Debug\VirtualTheatre.exe
+C:\Users\Darshan\Downloads\VT The Final\VT The Final\VirtualTheater\obj\Debug\VirtualTheatre.pdb
